@@ -1,0 +1,23 @@
+flowchart TD
+    A[Input Data x] --> B[Layer 1 Calculations]
+    B --> C[Layer 2 Calculations]
+    C --> D[Final Output yₚᵣₑd]
+    D --> E[Loss Calculation]
+    E --> F[Regularization]
+    F --> G[Gradient Calculation]
+    G --> H[Backpropagation]
+    H --> I[Gradient Descent]
+    I --> J{Convergence Reached?}
+    J -->|No| B
+    J -->|Yes| K[Model Evaluation]
+    K --> L[Final Trained Model]
+
+    subgraph Optimization Process
+    G
+    H
+    I
+    end
+
+    style A fill:#f9f,stroke:#333,stroke-width:4px
+    style L fill:#bbf,stroke:#f66,stroke-width:2px
+    style J fill:#ff9,stroke:#333,stroke-width:2px
