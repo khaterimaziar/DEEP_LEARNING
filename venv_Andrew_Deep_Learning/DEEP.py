@@ -1,2 +1,0 @@
-# Vectorization
-a=1
